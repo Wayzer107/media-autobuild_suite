@@ -22,7 +22,9 @@ SOURCE_REPO_FDKAAC=https://github.com/mstorsjo/fdk-aac
 SOURCE_REPO_FDKAACEXE=https://github.com/nu774/fdkaac
 SOURCE_REPO_FFMBC=https://github.com/bcoudurier/FFmbc.git#branch=ffmbc # no other branch
 SOURCE_REPO_FFMS2=https://github.com/FFMS/ffms2.git
-SOURCE_REPO_FFNVCODEC=https://code.ffmpeg.org/FFmpeg/nv-codec-headers.git
+# Pinned to SDK 9.1 (n9.1.23.1) for Kepler GPU (GTX 770 etc.) + CUDA 10.2 compatibility.
+# Newer SDK versions require drivers that dropped Kepler support (post-470.x on Linux).
+SOURCE_REPO_FFNVCODEC=https://github.com/FFmpeg/nv-codec-headers.git#tag=n9.1.23.1
 SOURCE_REPO_FLAC=https://github.com/xiph/flac.git
 SOURCE_REPO_FLITE=https://github.com/festvox/flite.git
 SOURCE_REPO_FONTCONFIG=https://gitlab.freedesktop.org/fontconfig/fontconfig.git#tag=LATEST

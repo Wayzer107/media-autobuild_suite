@@ -41,3 +41,4 @@ $RECYCLE.BIN/
 
 # Ignore extra files
 *_extra.sh
+!build/ffmpeg_extra.sh

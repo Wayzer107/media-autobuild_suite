@@ -1,0 +1,61 @@
+#################
+## media-autobuild_suite
+#################
+
+## Ignore build artefacts but keep patches, headers, and suite scripts
+
+# Blanket-ignore everything under build/...
+/build/*
+
+# ...except the suite shell scripts
+!build/*.sh
+!build/bash.sh
+!build/media-autobuild_suite.ini
+
+# Keep all .patch files in any build sub-directory
+!build/**/*.patch
+
+# Keep ffnvcodec headers (pinned for Kepler/GTX 770 NVENC support)
+!build/ffnvcodec-git/
+!build/ffnvcodec-git/**
+
+# Keep AMF SDK headers
+!build/AMF-git/
+!build/AMF-git/**
+
+# Ignore large generated / downloaded artefacts inside build
+build/**/*.log
+build/**/*.zip
+build/**/recently_checked
+build/**/last_run
+build/**/last_successful_run
+build/**/_to_remove
+build/**/cache/
+build/**/patchedFolders/
+build/**/*.7z
+build/**/*.tar.*
+
+## Ignore suite runtime directories
+/local32/
+/local64/
+/msys64/
+/msys32/
+
+mintty.lnk
+update_suite.sh
+
+/build/media-suite_deps_extra.sh
+/build/post_suite.sh
+*_extra.sh
+
+## VS Code
+.vscode
+
+#############
+## Windows detritus
+#############
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store

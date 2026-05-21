@@ -29,7 +29,7 @@ and patches OBS's direct NVENC plugin to use the same headers.
 - **Compiler:** VS 2026 Community (v18.0), `C:\Program Files\Microsoft Visual Studio\18\Community`
 - **CMake generator:** `"Visual Studio 18 2026"`
 - **Non-FFmpeg deps:** obs-deps pre-built binaries (Qt6, mbedTLS, curl, etc.)
-- **OBS version:** 30.x (pinned tag, e.g. `30.2.2`)
+- **OBS version:** 32.1.2 (pinned tag: `32.1.2`)
 
 ---
 
@@ -51,7 +51,7 @@ C:\media\obs-studio-kepler\
 ## build.ps1 Flow
 
 ```
-1. Clone OBS 30.x (pinned tag)
+1. Clone OBS source (pinned tag: `32.1.2`)
 2. Fetch obs-deps (Qt6, mbedTLS, curl, etc.) via OBS's own CI dep script
 3. Apply patches/nvenc-sdk9.patch to obs-studio/
 4. CMake configure (see flags below)

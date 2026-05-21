@@ -1519,7 +1519,7 @@ zip_logs() {
 }
 
 log() {
-    local errorOut=true quiet=false noRunning=false dontPrint=true ret OPTION OPTIND
+    local errorOut=true quiet=false noRunning=false dontPrint=false ret OPTION OPTIND
     while getopts ':qenp' OPTION; do
         case "$OPTION" in
         e) errorOut=false ;;
